@@ -27,7 +27,14 @@ namespace TlacitkoTEST_PVA
 
         protected void ReakceNaZmenuPoctu()
         {
+        } 
 
+        protected override void OnClick(EventArgs e)
+        {
+            base.OnClick(e);
+
+            ZmenPocetKliknuti.Invoke(++pocetKliknuti);
+            TlacitkoZakliknuto();
         }
     }
 }

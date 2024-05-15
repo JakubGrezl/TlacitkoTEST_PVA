@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace TlacitkoTEST_PVA
 {
-    internal class PocitaciTlacitko
+    public class PocitaciTlacitko : ZakladniButton
     {
+        int lokalniPocetKliknuti;
+
+        protected override void TlacitkoZakliknuto()
+        {
+            lokalniPocetKliknuti++;
+            pocetKliknuti++;
+
+            this.Text = $"Počet kliknutí: {lokalniPocetKliknuti} / {pocetKliknuti}";
+        }
     }
 }

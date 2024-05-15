@@ -6,7 +6,5 @@ namespace TlacitkoTEST_PVA
         {
             InitializeComponent();
         }
-
-
     }
 }
