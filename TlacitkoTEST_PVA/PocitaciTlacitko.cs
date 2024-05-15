@@ -13,17 +13,16 @@ namespace TlacitkoTEST_PVA
         public PocitaciTlacitko()
         {
             this.Text = $"Počet kliknutí: {lokalniPocetKliknuti} / {pocetKliknuti}";
-            ZmenPocetKliknuti += HelpMetoda;
         }
 
         protected override void TlacitkoZakliknuto()
         {
             lokalniPocetKliknuti++;
+            ReakceNaZmenuPoctu();
         }
 
-        public void HelpMetoda(int obj)
+        protected override void ReakceNaZmenuPoctu()
         {
-            obj = pocetKliknuti + 1;
             this.Text = $"Počet kliknutí: {lokalniPocetKliknuti} / {pocetKliknuti}";
         }
     }

@@ -11,7 +11,6 @@ namespace TlacitkoTEST_PVA
         int zivotnost;
         Random rand;
 
-
         public ZnicitelneTlacitko()
         {
             this.zivotnost = pocetKliknuti;
@@ -38,9 +37,13 @@ namespace TlacitkoTEST_PVA
                     this.Dispose(); 
                 }
             }
+
+            ReakceNaZmenuPoctu();
         }
 
-
-        
+        protected override void ReakceNaZmenuPoctu()
+        {
+            this.Text = $"Počet kliknutí: {zivotnost}";
+        }
     }
 }

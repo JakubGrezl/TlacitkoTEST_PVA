@@ -10,31 +10,27 @@ namespace TlacitkoTEST_PVA
     {
         protected static int pocetKliknuti;
 
-        protected static Action<int> ZmenPocetKliknuti;
+        protected static Action ZmenPocetKliknuti;
 
         protected ZakladniButton()
         {
-            ZmenPocetKliknuti += ZmenPocetKliknutiMetoda;
+            ZmenPocetKliknuti += ReakceNaZmenuPoctu;
             this.AutoSize = true;
         }
 
-        protected void ZmenPocetKliknutiMetoda(int obj)
-        {
-            pocetKliknuti = obj;
-            ReakceNaZmenuPoctu();
-        }
 
         protected abstract void TlacitkoZakliknuto();
 
-        protected void ReakceNaZmenuPoctu()
+        protected virtual void ReakceNaZmenuPoctu()
         {
         } 
+
 
         protected override void OnClick(EventArgs e)
         {
             base.OnClick(e);
-
-            ZmenPocetKliknuti.Invoke(++pocetKliknuti);
+            pocetKliknuti++;
+            ZmenPocetKliknuti.Invoke();
             TlacitkoZakliknuto();
         }
     }
