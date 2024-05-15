@@ -15,7 +15,6 @@ namespace TlacitkoTEST_PVA
         protected ZakladniButton()
         {
             ZmenPocetKliknuti += ZmenPocetKliknutiMetoda;
-            
             this.AutoSize = true;
         }
 

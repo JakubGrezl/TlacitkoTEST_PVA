@@ -16,6 +16,7 @@ namespace TlacitkoTEST_PVA
         {
             this.zivotnost = pocetKliknuti;
             this.Text = $"Počet kliknutí: {zivotnost}";
+
             rand = new Random();
         }
 
@@ -30,13 +31,16 @@ namespace TlacitkoTEST_PVA
             {
                 if (zivotnost > 0)
                 {
-                    this.Text = $"Počet kliknutí: {zivotnost}";
                     zivotnost--;
+                    this.Text = $"Počet kliknutí: {zivotnost}";
                 } else
                 {
                     this.Dispose(); 
                 }
             }
         }
+
+
+        
     }
 }
