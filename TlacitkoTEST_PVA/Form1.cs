@@ -14,7 +14,7 @@ namespace TlacitkoTEST_PVA
 
         private void button2_Click(object sender, EventArgs e)
         {
-            flowLayoutPanel1.Controls.Add(new ZnicitelneTlacitko());
+            flowLayoutPanel1.Controls.Add(new ZnicitelneTlacitko(checkBox1));
 
         }
     }
