@@ -10,11 +10,15 @@ namespace TlacitkoTEST_PVA
     {
         int lokalniPocetKliknuti;
 
+        public PocitaciTlacitko()
+        {
+            this.Text = $"Počet kliknutí: {lokalniPocetKliknuti} / {pocetKliknuti}";
+        }
+
         protected override void TlacitkoZakliknuto()
         {
             lokalniPocetKliknuti++;
-            pocetKliknuti++;
-
+            
             this.Text = $"Počet kliknutí: {lokalniPocetKliknuti} / {pocetKliknuti}";
         }
     }
